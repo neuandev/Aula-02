@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
@@ -18,6 +19,7 @@
         <a href="https://behance.net/nsdesigner" target="_blank" rel="noopener noreferrer">Behance</a>
         <a href="https://github.com/neuandev" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://linkedin.com/in/neuan-sampaio-237907259" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="btn-tema" class="btn-tema" type="button">Modo escuro</button>
       </nav>
     </div>
   </header>
@@ -27,7 +29,8 @@
     <section class="hero wrap">
       <div class="hero-text">
         <p class="eyebrow">Design gráfico &amp; desenvolvimento front-end</p>
-        <h1>Neuan Sampaio</h1>
+        <h1 id="nome">Neuan Sampaio</h1>
+        <p id="relogio" class="relogio" aria-live="polite"></p>
         <p class="bio">
           Transformo ideias em interfaces e artes que comunicam com clareza. Trabalho na fronteira
           entre design visual e código — do logotipo à tela renderizada no navegador — cuidando de
