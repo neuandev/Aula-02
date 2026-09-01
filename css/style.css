@@ -1,0 +1,297 @@
+/* ============ Reset ============ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============ Variáveis ============ */
+:root {
+  --cor-fundo: #F4F2FA;
+  --cor-cartao: #FFFFFF;
+  --cor-texto: #17131F;
+  --cor-texto-suave: #5B5568;
+  --cor-primaria: #5B3DF6;
+  --cor-primaria-hover: #4527E0;
+  --cor-borda: #E1DCF2;
+  --fonte-display: 'Space Grotesk', sans-serif;
+  --fonte-corpo: 'Inter', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #121018;
+    --cor-cartao: #1D1930;
+    --cor-texto: #EDEAF5;
+    --cor-texto-suave: #A9A3BF;
+    --cor-primaria: #9481FF;
+    --cor-primaria-hover: #AC9BFF;
+    --cor-borda: #2E2848;
+  }
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-display);
+  letter-spacing: -0.01em;
+}
+
+/* ============ Header ============ */
+.site-header {
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 20px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mark {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+}
+
+.socials a {
+  color: var(--cor-texto-suave);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.socials a:hover {
+  color: var(--cor-primaria);
+}
+
+/* ============ Hero ============ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 88px 24px 72px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 420px;
+  max-width: 520px;
+}
+
+.eyebrow {
+  color: var(--cor-primaria);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.bio {
+  color: var(--cor-texto-suave);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+}
+
+.hero-photo {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--cor-cartao);
+  box-shadow: 0 0 0 2px var(--cor-borda);
+  transition: transform 0.3s ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.05);
+}
+
+/* ============ Botão de contato ============ */
+.btn-contato {
+  display: inline-block;
+  background: var(--cor-primaria);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-contato:hover {
+  background: var(--cor-primaria-hover);
+  transform: translateY(-2px);
+}
+
+.btn-contato--ghost {
+  background: transparent;
+  color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+  padding: 10px 20px;
+}
+
+.btn-contato--ghost:hover {
+  background: var(--cor-primaria);
+  color: #FFFFFF;
+}
+
+/* ============ Seções gerais ============ */
+main section {
+  padding: 56px 24px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+main section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 28px;
+}
+
+/* ============ Habilidades ============ */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skill-tag:hover {
+  border-color: var(--cor-primaria);
+  transform: translateY(-2px);
+}
+
+/* ============ Interesses ============ */
+.hobbies-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+
+.hobbies-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cor-texto-suave);
+}
+
+.hobby-icon {
+  font-size: 1.2rem;
+}
+
+/* ============ Projetos / atuação ============ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--cor-primaria);
+}
+
+.project-card p {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ============ Footer ============ */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px 24px 48px;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ============ Media Query (mobile) ============ */
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 56px 20px 48px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main section {
+    padding: 40px 20px;
+  }
+}
