@@ -18,17 +18,6 @@
   --fonte-corpo: 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --cor-fundo: #121018;
-    --cor-cartao: #1D1930;
-    --cor-texto: #EDEAF5;
-    --cor-texto-suave: #A9A3BF;
-    --cor-primaria: #9481FF;
-    --cor-primaria-hover: #AC9BFF;
-    --cor-borda: #2E2848;
-  }
-}
 
 body {
   font-family: var(--fonte-corpo);
@@ -77,14 +66,16 @@ h1, h2, h3 {
   gap: 24px;
 }
 
-.socials a {
+.socials a,
+.btn-tema {
   color: var(--cor-texto-suave);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
-.socials a:hover {
+.socials a:hover,
+.btn-tema:hover {
   color: var(--cor-primaria);
 }
 
@@ -139,7 +130,7 @@ h1, h2, h3 {
 }
 
 .hero-photo img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* ============ Botão de contato ============ */
@@ -294,4 +285,40 @@ main section h2 {
   main section {
     padding: 40px 20px;
   }
+}
+
+
+/* ============ Aula 02 — Modo escuro manual ============ */
+.btn-tema {
+  border: 1px solid var(--cor-borda);
+  background: transparent;
+  color: var(--cor-texto-suave);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+body.modo-escuro {
+  --cor-fundo: #121018;
+  --cor-cartao: #1D1930;
+  --cor-texto: #EDEAF5;
+  --cor-texto-suave: #A9A3BF;
+  --cor-primaria: #9481FF;
+  --cor-primaria-hover: #AC9BFF;
+  --cor-borda: #2E2848;
+}
+
+body.modo-escuro .btn-tema {
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+.relogio {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
